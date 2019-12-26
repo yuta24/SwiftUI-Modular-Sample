@@ -9,11 +9,11 @@
 import SwiftUI
 
 class Presenting: ObservableObject {
-  let view: AnyView
+  let viewProvider: () -> AnyView
   @Published var displaying = false
 
-  init(view: AnyView) {
-    self.view = view
+  init(viewProvider: @escaping () -> AnyView) {
+    self.viewProvider = viewProvider
   }
 
   func toggle() {

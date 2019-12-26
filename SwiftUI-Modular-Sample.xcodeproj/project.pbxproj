@@ -129,11 +129,11 @@
 				2BC4AC8D23B3A476004105F2 /* SceneDelegate.swift */,
 				2BC4AC8F23B3A476004105F2 /* ContentView.swift */,
 				2BC4ACD323B3A82F004105F2 /* Presenting.swift */,
+				2B6B5B0823B3C2C6005AFC23 /* View+Extension.swift */,
 				2BC4AC9123B3A477004105F2 /* Assets.xcassets */,
 				2BC4AC9623B3A477004105F2 /* LaunchScreen.storyboard */,
 				2BC4AC9923B3A477004105F2 /* Info.plist */,
 				2BC4AC9323B3A477004105F2 /* Preview Content */,
-				2B6B5B0823B3C2C6005AFC23 /* View+Extension.swift */,
 			);
 			path = "SwiftUI-Modular-Sample";
 			sourceTree = "<group>";

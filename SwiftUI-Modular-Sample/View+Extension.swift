@@ -11,7 +11,7 @@ import SwiftUI
 extension View {
   func sheet(presenting: Presenting, onDismiss: (() -> Void)? = nil) -> some View {
     self.sheet(isPresented: Binding<Bool>(get: { presenting.displaying }, set: { presenting.displaying = $0 }), content: { () in
-      presenting.view
+      presenting.viewProvider()
     })
   }
 }

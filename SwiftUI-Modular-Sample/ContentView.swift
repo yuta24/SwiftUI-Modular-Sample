@@ -22,7 +22,7 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
   static var previews: some View {
     ContentView(
-      presenting: Presenting(view: AnyView(Text("Hello World!!")))
+        presenting: Presenting(viewProvider: { AnyView(Text("Hello World!!")) })
     )
   }
 }
