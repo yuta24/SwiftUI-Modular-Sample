@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2B6B5B0923B3C2C6005AFC23 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6B5B0823B3C2C6005AFC23 /* View+Extension.swift */; };
 		2BC4AC8C23B3A476004105F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC4AC8B23B3A476004105F2 /* AppDelegate.swift */; };
 		2BC4AC8E23B3A476004105F2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC4AC8D23B3A476004105F2 /* SceneDelegate.swift */; };
 		2BC4AC9023B3A476004105F2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC4AC8F23B3A476004105F2 /* ContentView.swift */; };
@@ -54,7 +53,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2B6B5B0823B3C2C6005AFC23 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		2BC4AC8823B3A476004105F2 /* SwiftUI-Modular-Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI-Modular-Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BC4AC8B23B3A476004105F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BC4AC8D23B3A476004105F2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -129,7 +127,6 @@
 				2BC4AC8D23B3A476004105F2 /* SceneDelegate.swift */,
 				2BC4AC8F23B3A476004105F2 /* ContentView.swift */,
 				2BC4ACD323B3A82F004105F2 /* Presenting.swift */,
-				2B6B5B0823B3C2C6005AFC23 /* View+Extension.swift */,
 				2BC4AC9123B3A477004105F2 /* Assets.xcassets */,
 				2BC4AC9623B3A477004105F2 /* LaunchScreen.storyboard */,
 				2BC4AC9923B3A477004105F2 /* Info.plist */,
@@ -328,7 +325,6 @@
 			files = (
 				2BC4ACD423B3A82F004105F2 /* Presenting.swift in Sources */,
 				2BC4AC8C23B3A476004105F2 /* AppDelegate.swift in Sources */,
-				2B6B5B0923B3C2C6005AFC23 /* View+Extension.swift in Sources */,
 				2BC4AC8E23B3A476004105F2 /* SceneDelegate.swift in Sources */,
 				2BC4AC9023B3A476004105F2 /* ContentView.swift in Sources */,
 			);

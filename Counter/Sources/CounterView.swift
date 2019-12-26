@@ -23,12 +23,13 @@ public struct CounterView: View {
     }
   }
 
-  public init() {
+  public init(initialCount: Int) {
+    self._count = State(initialValue: initialCount)
   }
 }
 
 struct CounterView_Previews: PreviewProvider {
-    static var previews: some View {
-        CounterView()
-    }
+  static var previews: some View {
+    CounterView(initialCount: 0)
+  }
 }

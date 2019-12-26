@@ -9,20 +9,20 @@
 import SwiftUI
 
 struct ContentView: View {
-  @ObservedObject var presenting: Presenting
+  @ObservedObject var presenting: Presenting<Int>
 
   var body: some View {
     Button("Display!!") {
       self.presenting.toggle()
     }
-    .sheet(presenting: presenting)
+    .sheet(presenting: presenting, inject: 10)
   }
 }
 
 struct ContentView_Previews: PreviewProvider {
   static var previews: some View {
     ContentView(
-        presenting: Presenting(viewProvider: { AnyView(Text("Hello World!!")) })
+      presenting: Presenting<Int>(viewProvider: { _ in AnyView(Text("Hello World!!")) })
     )
   }
 }
