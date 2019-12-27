@@ -9,10 +9,10 @@
 import SwiftUI
 
 class Presenting<I>: ObservableObject {
-  fileprivate let viewProvider: (I) -> AnyView
+  fileprivate let viewProvider: ViewProvider<I>
   @Published var displaying = false
 
-  init(viewProvider: @escaping (I) -> AnyView) {
+  init(viewProvider: @escaping ViewProvider<I>) {
     self.viewProvider = viewProvider
   }
 
@@ -25,6 +25,12 @@ extension View {
   func sheet<I>(presenting: Presenting<I>, onDismiss: (() -> Void)? = nil, inject: I) -> some View {
     self.sheet(isPresented: Binding<Bool>(get: { presenting.displaying }, set: { presenting.displaying = $0 }), content: { () in
       presenting.viewProvider(inject)
+    })
+  }
+
+  func sheet(presenting: Presenting<Void>, onDismiss: (() -> Void)? = nil) -> some View {
+    self.sheet(isPresented: Binding<Bool>(get: { presenting.displaying }, set: { presenting.displaying = $0 }), content: { () in
+      presenting.viewProvider(())
     })
   }
 }

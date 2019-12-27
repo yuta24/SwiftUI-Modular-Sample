@@ -9,6 +9,7 @@
 import UIKit
 import SwiftUI
 import Counter
+import ToDo
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -22,10 +23,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     // Create the SwiftUI view that provides the window contents.
     let contentView = ContentView(
-        presenting: Presenting(
-            viewProvider: { count in
-                AnyView(CounterView(initialCount: count))
-            })
+      counterPresenting: Presenting(
+        viewProvider: { count in
+          AnyView(CounterView(initialCount: count))
+        }),
+      todoPresenting: Presenting(
+        viewProvider: { () in
+          AnyView(ToDoView())
+        })
       )
 
     // Use a UIHostingController as window root view controller.

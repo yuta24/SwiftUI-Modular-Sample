@@ -22,6 +22,8 @@
 		5848796823B5896200EB924B /* ToDo.h in Headers */ = {isa = PBXBuildFile; fileRef = 5848795823B5896200EB924B /* ToDo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5848796B23B5896200EB924B /* ToDo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5848795623B5896200EB924B /* ToDo.framework */; };
 		5848796C23B5896200EB924B /* ToDo.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5848795623B5896200EB924B /* ToDo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5848797523B58B2F00EB924B /* ToDoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5848797423B58B2F00EB924B /* ToDoView.swift */; };
+		5848797923B58D2400EB924B /* ViewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5848797823B58D2400EB924B /* ViewProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +85,8 @@
 		5848795623B5896200EB924B /* ToDo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ToDo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5848795823B5896200EB924B /* ToDo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToDo.h; sourceTree = "<group>"; };
 		5848795923B5896200EB924B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5848797423B58B2F00EB924B /* ToDoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoView.swift; sourceTree = "<group>"; };
+		5848797823B58D2400EB924B /* ViewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +151,7 @@
 				2BC4AC8B23B3A476004105F2 /* AppDelegate.swift */,
 				2BC4AC8D23B3A476004105F2 /* SceneDelegate.swift */,
 				2BC4AC8F23B3A476004105F2 /* ContentView.swift */,
+				5848797823B58D2400EB924B /* ViewProvider.swift */,
 				2BC4ACD323B3A82F004105F2 /* Presenting.swift */,
 				2BC4AC9123B3A477004105F2 /* Assets.xcassets */,
 				2BC4AC9623B3A477004105F2 /* LaunchScreen.storyboard */,
@@ -194,10 +199,19 @@
 		5848795723B5896200EB924B /* ToDo */ = {
 			isa = PBXGroup;
 			children = (
+				5848797323B58B1F00EB924B /* Sources */,
 				5848795823B5896200EB924B /* ToDo.h */,
 				5848795923B5896200EB924B /* Info.plist */,
 			);
 			path = ToDo;
+			sourceTree = "<group>";
+		};
+		5848797323B58B1F00EB924B /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				5848797423B58B2F00EB924B /* ToDoView.swift */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,6 +333,7 @@
 					};
 					5848795523B5896200EB924B = {
 						CreatedOnToolsVersion = 11.3;
+						LastSwiftMigration = 1130;
 					};
 				};
 			};
@@ -383,6 +398,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BC4ACD423B3A82F004105F2 /* Presenting.swift in Sources */,
+				5848797923B58D2400EB924B /* ViewProvider.swift in Sources */,
 				2BC4AC8C23B3A476004105F2 /* AppDelegate.swift in Sources */,
 				2BC4AC8E23B3A476004105F2 /* SceneDelegate.swift in Sources */,
 				2BC4AC9023B3A476004105F2 /* ContentView.swift in Sources */,
@@ -409,6 +425,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5848797523B58B2F00EB924B /* ToDoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -704,6 +721,7 @@
 		5848796D23B5896200EB924B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -721,6 +739,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.bivre.ToDo;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -731,6 +750,7 @@
 		5848796E23B5896200EB924B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
